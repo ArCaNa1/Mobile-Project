@@ -1,16 +1,14 @@
 package com.example.studytune;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.studytune.MusicActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    MediaPlayer mediaPlayer;
     Button btnAddPlan, btnTimer, btnMusic;
 
     @Override
@@ -32,19 +30,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // 음악 선택 액티비티로 이동하도록 수정
         btnMusic.setOnClickListener(v -> {
-            if (mediaPlayer == null) {
-                mediaPlayer = MediaPlayer.create(this, R.raw.focus_music);
-                mediaPlayer.start();
-            } else if (!mediaPlayer.isPlaying()) {
-                mediaPlayer.start();
-            }
+            Intent intent = new Intent(this, MusicActivity.class);
+            startActivity(intent);
         });
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (mediaPlayer != null) mediaPlayer.release();
     }
 }

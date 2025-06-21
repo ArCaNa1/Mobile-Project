@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button android:id="@+id/btnAfterYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="After You" />
+
+    <Button android:id="@+id/btnBurkinelectric"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Burkinelectric" />
+
+    <Button android:id="@+id/btnFarApart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Far Apart" />
+
+    <Button android:id="@+id/btnUnavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unavailable" />
+
+    <Button android:id="@+id/btnValleyOfSpies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valley of Spies" />
+
+    <Button android:id="@+id/btnWinnerWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Winner Winner Funky Chicken" />
+
+    <Button android:id="@+id/btnFocusMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Focus Music" />
+
+    <Button android:id="@+id/btnStudyMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Study Music" />
+
+    <Button android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="음악 정지" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="← 뒤로가기" />
+
+</LinearLayout>
