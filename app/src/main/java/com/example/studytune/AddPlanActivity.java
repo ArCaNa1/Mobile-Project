@@ -12,7 +12,7 @@ public class AddPlanActivity extends AppCompatActivity {
 
     EditText editSubject, editGoalTime;
     DatePicker datePicker;
-    Button btnSave;
+    Button btnSave, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class AddPlanActivity extends AppCompatActivity {
         editGoalTime = findViewById(R.id.editGoalTime);
         datePicker = findViewById(R.id.datePicker);
         btnSave = findViewById(R.id.btnSave);
+        btnBack = findViewById(R.id.btnBack); // 추가
 
         btnSave.setOnClickListener(v -> {
             String subject = editSubject.getText().toString().trim();
@@ -38,10 +39,14 @@ public class AddPlanActivity extends AppCompatActivity {
                 return;
             }
 
-            String result = "과목: " + subject + "\n목표 시간: " + goalTime + "시간\n 날짜: " + date;
+            String result = "과목: " + subject + "\n 목표 시간: " + goalTime + "시간\n 날짜: " + date;
             Toast.makeText(this, result, Toast.LENGTH_LONG).show();
 
-            finish(); // 입력 완료 후 화면 종료
+            finish();
+        });
+
+        btnBack.setOnClickListener(v -> {
+            finish(); // MainActivity로 돌아가기
         });
     }
 }
