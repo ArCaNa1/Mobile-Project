@@ -25,14 +25,23 @@ public class AddPlanActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btnSave);
 
         btnSave.setOnClickListener(v -> {
-            String subject = editSubject.getText().toString();
-            String time = editGoalTime.getText().toString();
+            String subject = editSubject.getText().toString().trim();
+            String goalTime = editGoalTime.getText().toString().trim();
 
-            Toast.makeText(this,
-                    "과목: " + subject + ", 목표: " + time + "시간",
-                    Toast.LENGTH_LONG).show();
+            int year = datePicker.getYear();
+            int month = datePicker.getMonth() + 1;
+            int day = datePicker.getDayOfMonth();
+            String date = year + "-" + month + "-" + day;
 
-            finish(); // 화면 종료
+            if (subject.isEmpty() || goalTime.isEmpty()) {
+                Toast.makeText(this, "모든 항목을 입력해주세요.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            String result = "과목: " + subject + "\n목표 시간: " + goalTime + "시간\n 날짜: " + date;
+            Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+
+            finish(); // 입력 완료 후 화면 종료
         });
     }
 }

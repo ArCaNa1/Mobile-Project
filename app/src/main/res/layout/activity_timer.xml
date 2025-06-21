@@ -1,15 +1,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="24dp"
     android:gravity="center"
+    android:padding="24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Chronometer
         android:id="@+id/chronometer"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp" />
 
     <Button
         android:id="@+id/btnStart"
@@ -21,5 +22,13 @@
         android:id="@+id/btnStop"
         android:text="정지"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:text="뒤로 가기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp" />
 </LinearLayout>
